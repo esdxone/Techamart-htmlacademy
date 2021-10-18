@@ -1,12 +1,30 @@
 @charset "UTF-8";
+
 @font-face {
     font-family: "cuprum";
     font-style: normal;
     font-weight: 400;
     src: local("cuprum"),
-         url("../fonts/cuprum.woff2") format("woff2"),
-         url("../fonts/cuprum.woff") format("woff");
-  }
+        url("../fonts/cuprum.woff2") format("woff2"),
+        url("../fonts/cuprum.woff") format("woff");
+}
+@font-face {
+    font-family: "cuprum";
+    font-style: italic;
+    font-weight: 400;
+    src: local("cuprumitalic"),
+        url("../fonts/cuprumitalic.woff2") format("woff2"),
+        url("../fonts/cuprumitalic.woff") format("woff");
+}
+@font-face {
+    font-family: "cuprum";
+    font-style: bold;
+    font-weight: 800;
+    src: local("cuprumitalic"),
+        url("../fonts/cuprumbold.woff2") format("woff2"),
+        url("../fonts/cuprumbold.woff") format("woff");
+}
+
 *,
 *,
 ::after,
@@ -114,7 +132,6 @@ p {
 .header__top-content {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -158,6 +175,7 @@ p {
 .header__top-search input {
     background: transparent;
     border: none;
+    width: 193px;
 }
 
 .header__top-search input:focus-visible {
@@ -169,15 +187,24 @@ p {
     mix-blend-mode: normal;
     opacity: 0.3;
     margin-right: 8px;
+    width: 17px;
+    height: 17px;
 }
+
 .icon-bookmark {
     mix-blend-mode: normal;
     margin-right: 8px;
+    width: 15px;
+    height: 16px;
 }
+
 .icon-cart {
     mix-blend-mode: normal;
     margin-right: 8px;
+    width: 15px;
+    height: 15px;
 }
+
 .header__top-bookmark {
     color: #fff;
     font-family: Cuprum;
@@ -210,17 +237,180 @@ p {
 
 .header__top-order {
     background-color: #63A63E;
+    padding: 10px 16px 8px 19px;
     color: #fff;
-    padding: 9px 16px 9px 16px;
     font-family: Cuprum;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
+    text-decoration: none;
+    max-width: 150px;
+    width: 100%;
+    transition: all .3s ease-out;
+}
+
+.header__top-order:hover {
+    background-color: #518833;
 }
 
 .container {
     max-width: 940px;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+.header__main{
+    background: #F1F5F7;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 44px;
+    padding-bottom: 60px;
+    border-top: none;
+}
+
+.header__main-content {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.header__main-info {
+    font-family: Cuprum;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: #EE3643;
+    margin-left: 29px;
+    margin-right: 95px;
+}
+.header__main-contacts {
+    margin-right: 70px;
+}
+.header__main-phone {
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    padding: 6px 45px 5px 35px;
+    max-width: 270px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.header__main-phone .icon-phone {
+    margin-right: 16px;
+    width: 19px;
+    height: 19px;
+}
+
+.header__main-phone a {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    color: #EE3643;
+    text-decoration: none;
+    transition: color .3s ease-out;
+}
+
+.header__main-phone a:hover {
+    color: #c22f39;
+}
+
+.header__main-address {
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #32425C;
+    text-align: center;
+}
+
+.header__main-auth-block {
+    display: flex;
+    justify-content: baseline;
+}
+
+.header__main-login {
+    background: #fff;
+    padding: 15px 27px 12px 19px;
+    max-height: 45px;
+    display: flex;
+    align-items: center;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000;
+    text-decoration: none;
+    transition: background .3s ease-out;
+    margin-right: 10px;
+}
+
+.header__main-login:hover {
+    background: rgba(250, 250, 250, 0.849);
+}
+
+.header__main-login .icon-login {
+    margin-right: 6px;
+}
+
+.header__main-reg {
+    background: #fff;
+    padding: 15px 23px 12px 25px;
+    max-height: 45px;
+    display: flex;
+    align-items: center;
+    font-family: Cuprum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000;
+    text-decoration: none;
+    transition: background .3s ease-out;
+}
+
+.header__main-reg:hover {
+    background: rgba(250, 250, 250, 0.849);
+}
+
+.header__main-menu {
+    padding: 17px 53px 20px 53px;
+    background: #32425C;
+    box-shadow: inset 0px -5px 0px #293449;
+}
+
+.header__main-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.header__main-menu li {
+    list-style-type: none;
+    margin-right: 56px;
+}
+
+.header__main-menu a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    font-family: Cuprum;
+    transition: color .3s ease-out;
+}
+
+.header__main-menu a:hover {
+    color: #ffffffab;
+}
+
+.header__main-menu ul li:last-child {
+    margin-right: 0;
 }
