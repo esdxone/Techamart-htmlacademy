@@ -9,6 +9,7 @@
   <link type="text/css" rel="stylesheet" href="css/slick.css">
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 
@@ -355,7 +356,7 @@
             <div class="mp-info__about-content content">
               <p class="mp-info__contacts-subtitle">Вы можете забрать товар сами, <br>
                 заехав в наш офис:</p>
-              <a href="#" class="mp-info__contacts-map-link"> <img src="../Techamart---htmlacademy/img/map-img.jpg"
+              <a href="#" data-target="modal" data-modal="map-modal" class="mp-info__contacts-map-link"> <img src="../Techamart---htmlacademy/img/map-img.jpg"
                   title="Карта" alt="Карта"></a>
               <a href="#" data-target="modal" data-modal="feedback-modal" class="mp-info__about-link">Заблудились? НапиШИТЕ НАМ!</a>
             </div>
@@ -391,6 +392,16 @@
               <button type="submit" class="modal-submit-button">Отправить</button>
             </div>
           </form>
+        </div>
+      </div>
+      <div id="map-modal" tabindex="-1" class="modal modal-map js-modal">
+        <div class="modal-content js-modal-content">
+          <a href="#" class="modal-close js-modal-close" data-target="modal-close">
+            <svg class="icon icon-modal-close">
+              <use xlink:href="#icon-modal-close"></use>
+            </svg>
+          </a>
+          <div id="map" style="width: 100%; height: 400px"></div>
         </div>
       </div>
       <div class="modal-fade js-modal-fade"></div>

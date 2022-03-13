@@ -1494,3 +1494,9 @@ background: #BA2732;
     background: #F4F4F4;
     z-index: 1;
 }
+.modal-map .modal-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 920px;
+    padding-top: 60px;
+}
